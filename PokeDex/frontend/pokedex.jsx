@@ -5,8 +5,9 @@ import * as APIUtil from './util/api_util.js';
 import { requestAllPokemon } from './actions/pokemon_actions.js';
 import configureStore from './store/store.js';
 import { selectAllPokemon } from './reducers/selectors.js';
+import { HashRouter, Route } from 'react-router-dom';
 
-import Root from './components/root.jsx'
+import Root from './components/root.jsx';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,9 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store = {store}/>,
     rootEl);
 
-
-  window.requestAllPokemon = requestAllPokemon;
-  window.selectAllPokemon = selectAllPokemon;
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  // window.requestAllPokemon = requestAllPokemon;
+  // window.selectAllPokemon = selectAllPokemon;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
 });
